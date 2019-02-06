@@ -1,0 +1,12 @@
+<launch>
+
+<node name="rosflight_io" pkg="rosflight" type="rosflight_io" output="screen" />
+
+<node pkg="rosservice" type="rosservice" name="cal_imu" args="call /calibrate_imu" output="screen"/>
+
+<node pkg="rosservice" type="rosservice" name="cal_baro" args="call /calibrate_baro" output="screen"/>
+
+<node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="2 rosflight param_startup.launch" name="timed_roslaunch" output="screen" />
+
+</launch>
+

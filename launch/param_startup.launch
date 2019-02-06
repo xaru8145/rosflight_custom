@@ -1,0 +1,6 @@
+<launch>
+  
+   <node pkg="rosservice" type="rosservice" name="param_load_from_file" args="call /param_load_from_file /home/xaru8145/catkin_ws/src/rosflight/rosflight/working_params.yaml" output="screen"/>
+
+</launch>
+
