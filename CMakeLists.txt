@@ -84,6 +84,15 @@ target_link_libraries(rosflight_io
   ${Boost_LIBRARES}
 )
 
+# vrpn2odom_node
+add_executable(vrpn2odom
+  src/vrpn2odom.cpp
+)
+add_dependencies(vrpn2odom ${${PRPJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(vrpn2odom
+  ${catkin_LIBRARIES}
+)
+
 add_executable(calibrate_mag
     src/mag_cal_node.cpp
     src/mag_cal.cpp
